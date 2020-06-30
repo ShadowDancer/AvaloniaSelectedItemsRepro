@@ -1,0 +1,24 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:AvaloniaNoSelectedEventsRepro.ViewModels;assembly=AvaloniaNoSelectedEventsRepro"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaNoSelectedEventsRepro.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="AvaloniaNoSelectedEventsRepro">
+
+  <Design.DataContext>
+    <vm:MainWindowViewModel/>
+  </Design.DataContext>
+
+  <StackPanel>
+    <StackPanel Orientation="Horizontal">
+      <TextBlock Text="Select multiple items, counter displays amount of events triggered: "/>
+      <TextBlock Text="{Binding Counter}"/>
+    </StackPanel>
+    <ListBox SelectionMode="Multiple" SelectionChanged="OnSelectionChanged">
+      ListBox
+    </ListBox>
+  </StackPanel>
+</Window>
